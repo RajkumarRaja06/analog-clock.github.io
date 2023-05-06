@@ -1,0 +1,143 @@
+/* select a font */
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+:root {
+  --clr-sky-blue: #8ecae6ff;
+  --clr-blue-green: #219ebcff;
+  --clr-prussian-blue: #023047ff;
+  --clr-selective-yellow: #ffb703ff;
+  --clr-ut-orange: #fb8500ff;
+  --ff-roboto: "Roboto", sans-serif;
+  --ff-noto-sans: "Noto Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --max-width: 1170px;
+  --fixed-width: 450px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url(../assets/images/green-forest.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Orbitron", sans-serif;
+}
+
+.clock {
+  border: 10px solid #fff;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  box-shadow: var(--dark-shadow);
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second,
+.minute,
+.hour {
+  position: absolute;
+  border: 2px solid;
+  transform: translateX(50%);
+  /* rotate: 90deg; */
+  height: 7px;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.second {
+  height: 5px;
+  width: 38%;
+  color: var(--clr-selective-yellow);
+}
+
+.minute {
+  border: 3px solid;
+  height: 8.5px;
+  width: 35%;
+  color: var(--clr-prussian-blue);
+}
+
+.hour {
+  border: 3px solid;
+  height: 8px;
+  width: 25%;
+  color: var(--clr-sky-blue);
+}
+
+.h12,
+.h3,
+.h6,
+.h9 {
+  position: absolute;
+  font-size: 1.7rem;
+  font-weight: 900;
+  margin: 0.5rem;
+}
+
+.h12 {
+  top: 0;
+}
+
+.h3 {
+  right: 0;
+}
+
+.h6 {
+  bottom: 0;
+}
+
+.h9 {
+  left: 0;
+}
+
+.dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #fff;
+  z-index: 100;
+  box-shadow: var(--dark-shadow);
+}
+
+.date {
+  top: 25%;
+}
+
+.date,
+.day {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #d9d9d9;
+  padding: 0.2rem;
+  z-index: -100;
+}
+
+.day {
+  bottom: 25%;
+}
